@@ -1,0 +1,22 @@
+class Computer {
+    constructor(brand, OS, type) {
+        this.test = test;
+        this.brand = brand;
+        this.OS = OS;
+        this.type = type;
+    }
+    powerOn() {
+        return `${this.brand} ${this.type} powers on with ${this.OS}.`;
+    }
+    static powerOnMultiple(computers) {
+        return computers.map(computer => computer.powerOn());
+    }
+}
+const computer1 = new Computer("Apple", "macOS", "Laptop");
+const computer2 = new Computer("Dell", "Windows", "Desktop");
+
+console.log(computer1.powerOn()); 
+console.log(computer2.powerOn()); 
+
+const testMultiple = Computer.powerOnMultiple([computer1, computer2]);
+console.log(testMultiple); 
